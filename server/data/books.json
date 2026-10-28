@@ -1,0 +1,927 @@
+[
+  {
+    "id": "1",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "price": 12.99,
+    "category": "Classic",
+    "stock": 8,
+    "rating": 4.4,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg",
+    "description": "A short novel about love, money, and a life built for someone else.",
+    "ratingCount": 1280,
+    "reviews": [
+      {
+        "name": "Aarav",
+        "rating": 4,
+        "text": "Could not put it down. Easily one of my favourites this year."
+      },
+      {
+        "name": "Ananya",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "price": 14.5,
+    "category": "Classic",
+    "stock": 6,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780061120084-L.jpg",
+    "description": "A story of childhood in a small town and the courage to stand up for a neighbor.",
+    "rating": 4.8,
+    "ratingCount": 2150,
+    "reviews": [
+      {
+        "name": "Priya",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      },
+      {
+        "name": "Liam",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      },
+      {
+        "name": "Arjun",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "1984",
+    "author": "George Orwell",
+    "price": 11.25,
+    "category": "Classic",
+    "stock": 10,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg",
+    "description": "A warning about a world where language, memory, and truth are controlled.",
+    "rating": 4.7,
+    "ratingCount": 1980,
+    "reviews": [
+      {
+        "name": "Chris",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      },
+      {
+        "name": "Rohan",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "price": 9.99,
+    "category": "Classic",
+    "stock": 7,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg",
+    "description": "A sharp comedy of manners about first impressions and second chances.",
+    "rating": 4.6,
+    "ratingCount": 1710,
+    "reviews": [
+      {
+        "name": "Ishaan",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      },
+      {
+        "name": "Emma",
+        "rating": 5,
+        "text": "Exactly what I hoped for, and the delivery was quick."
+      },
+      {
+        "name": "Meera",
+        "rating": 4,
+        "text": "Could not put it down. Easily one of my favourites this year."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "price": 15.99,
+    "category": "Fantasy",
+    "stock": 2,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780547928227-L.jpg",
+    "description": "A homebody is pulled into a quest for treasure, with a dragon at the end of the road.",
+    "rating": 4.8,
+    "ratingCount": 2420,
+    "reviews": [
+      {
+        "name": "Nina",
+        "rating": 5,
+        "text": "Exactly what I hoped for, and the delivery was quick."
+      },
+      {
+        "name": "Diya",
+        "rating": 4,
+        "text": "Could not put it down. Easily one of my favourites this year."
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "price": 13.75,
+    "category": "Fantasy",
+    "stock": 9,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780590353427-L.jpg",
+    "description": "A boy learns he is a wizard and begins his first year at a hidden school.",
+    "rating": 4.9,
+    "ratingCount": 3560,
+    "reviews": [
+      {
+        "name": "Tara",
+        "rating": 4,
+        "text": "Could not put it down. Easily one of my favourites this year."
+      },
+      {
+        "name": "Sam",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      },
+      {
+        "name": "Kavya",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "The Name of the Wind",
+    "author": "Patrick Rothfuss",
+    "price": 18,
+    "category": "Fantasy",
+    "stock": 4,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780756404741-L.jpg",
+    "description": "A gifted musician tells the story of how he became a legend, and what it cost.",
+    "rating": 4.5,
+    "ratingCount": 940,
+    "reviews": [
+      {
+        "name": "Aarav",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      },
+      {
+        "name": "Ananya",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "The Midnight Library",
+    "author": "Matt Haig",
+    "price": 16.5,
+    "category": "Fiction",
+    "stock": 5,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780525559474-L.jpg",
+    "description": "Between life and death, a woman browses books that are other lives she might have lived.",
+    "rating": 4.2,
+    "ratingCount": 1320,
+    "reviews": [
+      {
+        "name": "Priya",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      },
+      {
+        "name": "Liam",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      },
+      {
+        "name": "Arjun",
+        "rating": 4,
+        "text": "Good read overall, though it slows down in the middle."
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "price": 10.99,
+    "category": "Fiction",
+    "stock": 11,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780062315007-L.jpg",
+    "description": "A shepherd follows a recurring dream across the desert in search of treasure.",
+    "rating": 4.1,
+    "ratingCount": 2010,
+    "reviews": [
+      {
+        "name": "Chris",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      },
+      {
+        "name": "Rohan",
+        "rating": 4,
+        "text": "Good read overall, though it slows down in the middle."
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "price": 17.25,
+    "category": "Self-help",
+    "stock": 6,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg",
+    "description": "A practical look at how small, repeated actions change what you do each day.",
+    "rating": 4.8,
+    "ratingCount": 4120,
+    "reviews": [
+      {
+        "name": "Ishaan",
+        "rating": 5,
+        "text": "Exactly what I hoped for, and the delivery was quick."
+      },
+      {
+        "name": "Emma",
+        "rating": 4,
+        "text": "Could not put it down. Easily one of my favourites this year."
+      },
+      {
+        "name": "Meera",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "price": 21,
+    "category": "History",
+    "stock": 3,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780062316097-L.jpg",
+    "description": "A wide history of how humans moved from foraging bands to modern societies.",
+    "rating": 4.5,
+    "ratingCount": 1860,
+    "reviews": [
+      {
+        "name": "Nina",
+        "rating": 4,
+        "text": "Could not put it down. Easily one of my favourites this year."
+      },
+      {
+        "name": "Diya",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "title": "Educated",
+    "author": "Tara Westover",
+    "price": 15.4,
+    "category": "Memoir",
+    "stock": 1,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780399590504-L.jpg",
+    "description": "A memoir about growing up far from school and fighting for an education.",
+    "rating": 4.7,
+    "ratingCount": 1430,
+    "reviews": [
+      {
+        "name": "Tara",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      },
+      {
+        "name": "Sam",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      },
+      {
+        "name": "Kavya",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "price": 17.5,
+    "category": "Science Fiction",
+    "stock": 7,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780441172719-L.jpg",
+    "description": "A young heir is thrown into a war over the desert planet that holds the universe's most valuable resource.",
+    "rating": 4.6,
+    "ratingCount": 1620,
+    "reviews": [
+      {
+        "name": "Aarav",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      },
+      {
+        "name": "Ananya",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "price": 12.5,
+    "category": "Science Fiction",
+    "stock": 9,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780060850524-L.jpg",
+    "description": "A polished future society trades freedom for comfort, and one outsider notices the cost.",
+    "rating": 4.3,
+    "ratingCount": 1390,
+    "reviews": [
+      {
+        "name": "Priya",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      },
+      {
+        "name": "Liam",
+        "rating": 5,
+        "text": "Exactly what I hoped for, and the delivery was quick."
+      },
+      {
+        "name": "Arjun",
+        "rating": 4,
+        "text": "Good read overall, though it slows down in the middle."
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "price": 11.99,
+    "category": "Science Fiction",
+    "stock": 8,
+    "cover": "https://covers.openlibrary.org/b/isbn/9781451673319-L.jpg",
+    "description": "In a world where books are burned, a fireman starts to ask what he is protecting.",
+    "rating": 4.4,
+    "ratingCount": 1210,
+    "reviews": [
+      {
+        "name": "Chris",
+        "rating": 5,
+        "text": "Exactly what I hoped for, and the delivery was quick."
+      },
+      {
+        "name": "Rohan",
+        "rating": 4,
+        "text": "Could not put it down. Easily one of my favourites this year."
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "price": 24.99,
+    "category": "Fantasy",
+    "stock": 5,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780618640157-L.jpg",
+    "description": "A small group sets out to destroy a ring that could let a dark lord rule Middle-earth.",
+    "rating": 4.9,
+    "ratingCount": 3010,
+    "reviews": [
+      {
+        "name": "Ishaan",
+        "rating": 4,
+        "text": "Could not put it down. Easily one of my favourites this year."
+      },
+      {
+        "name": "Emma",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      },
+      {
+        "name": "Meera",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "title": "A Game of Thrones",
+    "author": "George R.R. Martin",
+    "price": 18.99,
+    "category": "Fantasy",
+    "stock": 6,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780553593716-L.jpg",
+    "description": "Noble families fight for the Iron Throne while an older threat gathers in the north.",
+    "rating": 4.6,
+    "ratingCount": 2740,
+    "reviews": [
+      {
+        "name": "Nina",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      },
+      {
+        "name": "Diya",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "price": 13.99,
+    "category": "Mystery",
+    "stock": 10,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780307474278-L.jpg",
+    "description": "A symbologist chases clues through famous art and history after a murder at the Louvre.",
+    "rating": 3.9,
+    "ratingCount": 1980,
+    "reviews": [
+      {
+        "name": "Tara",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      },
+      {
+        "name": "Sam",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      },
+      {
+        "name": "Kavya",
+        "rating": 4,
+        "text": "Interesting ideas, but not for everyone. Still glad I read it."
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "title": "Gone Girl",
+    "author": "Gillian Flynn",
+    "price": 14.25,
+    "category": "Thriller",
+    "stock": 4,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780307588371-L.jpg",
+    "description": "On their anniversary a wife disappears, and the story of the marriage starts to unravel.",
+    "rating": 4.1,
+    "ratingCount": 1760,
+    "reviews": [
+      {
+        "name": "Aarav",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      },
+      {
+        "name": "Ananya",
+        "rating": 4,
+        "text": "Interesting ideas, but not for everyone. Still glad I read it."
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "price": 19.5,
+    "category": "Psychology",
+    "stock": 6,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780374533557-L.jpg",
+    "description": "A Nobel winner explains the two systems of thought that shape our judgments and decisions.",
+    "rating": 4.2,
+    "ratingCount": 1090,
+    "reviews": [
+      {
+        "name": "Priya",
+        "rating": 5,
+        "text": "Exactly what I hoped for, and the delivery was quick."
+      },
+      {
+        "name": "Liam",
+        "rating": 4,
+        "text": "Could not put it down. Easily one of my favourites this year."
+      },
+      {
+        "name": "Arjun",
+        "rating": 4,
+        "text": "Good read overall, though it slows down in the middle."
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "title": "The Power of Habit",
+    "author": "Charles Duhigg",
+    "price": 16.75,
+    "category": "Psychology",
+    "stock": 8,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780812981605-L.jpg",
+    "description": "An accessible look at why habits form and how people and companies change them.",
+    "rating": 4.4,
+    "ratingCount": 1340,
+    "reviews": [
+      {
+        "name": "Chris",
+        "rating": 4,
+        "text": "Could not put it down. Easily one of my favourites this year."
+      },
+      {
+        "name": "Rohan",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "title": "Ikigai",
+    "author": "Héctor García",
+    "price": 13.5,
+    "category": "Philosophy",
+    "stock": 12,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780143130727-L.jpg",
+    "description": "The Japanese idea of a reason for being, and how it connects to a long, happy life.",
+    "rating": 4,
+    "ratingCount": 870,
+    "reviews": [
+      {
+        "name": "Ishaan",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      },
+      {
+        "name": "Emma",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      },
+      {
+        "name": "Meera",
+        "rating": 4,
+        "text": "Solid book. I enjoyed the start more than the ending."
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "title": "Man's Search for Meaning",
+    "author": "Viktor E. Frankl",
+    "price": 12.25,
+    "category": "Philosophy",
+    "stock": 9,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780807014295-L.jpg",
+    "description": "A psychiatrist reflects on surviving the camps and finding purpose in suffering.",
+    "rating": 4.7,
+    "ratingCount": 1580,
+    "reviews": [
+      {
+        "name": "Nina",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      },
+      {
+        "name": "Diya",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "title": "Think and Grow Rich",
+    "author": "Napoleon Hill",
+    "price": 10.5,
+    "category": "Self-help",
+    "stock": 11,
+    "cover": "https://covers.openlibrary.org/b/isbn/9781585424337-L.jpg",
+    "description": "A classic of personal achievement built on interviews with successful people.",
+    "rating": 4.3,
+    "ratingCount": 1120,
+    "reviews": [
+      {
+        "name": "Tara",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      },
+      {
+        "name": "Sam",
+        "rating": 5,
+        "text": "Exactly what I hoped for, and the delivery was quick."
+      },
+      {
+        "name": "Kavya",
+        "rating": 4,
+        "text": "Interesting ideas, but not for everyone. Still glad I read it."
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "title": "Rich Dad Poor Dad",
+    "author": "Robert T. Kiyosaki",
+    "price": 11.75,
+    "category": "Business",
+    "stock": 13,
+    "cover": "https://covers.openlibrary.org/b/isbn/9781612680194-L.jpg",
+    "description": "Two father figures with very different views on money shape a simple lesson in finance.",
+    "rating": 4.1,
+    "ratingCount": 1930,
+    "reviews": [
+      {
+        "name": "Aarav",
+        "rating": 5,
+        "text": "Exactly what I hoped for, and the delivery was quick."
+      },
+      {
+        "name": "Ananya",
+        "rating": 4,
+        "text": "Interesting ideas, but not for everyone. Still glad I read it."
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "title": "Zero to One",
+    "author": "Peter Thiel",
+    "price": 17,
+    "category": "Business",
+    "stock": 5,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780804139298-L.jpg",
+    "description": "Notes on building startups that create something new instead of copying what works.",
+    "rating": 4.2,
+    "ratingCount": 760,
+    "reviews": [
+      {
+        "name": "Priya",
+        "rating": 4,
+        "text": "Could not put it down. Easily one of my favourites this year."
+      },
+      {
+        "name": "Liam",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      },
+      {
+        "name": "Arjun",
+        "rating": 4,
+        "text": "Good read overall, though it slows down in the middle."
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "title": "Becoming",
+    "author": "Michelle Obama",
+    "price": 19.99,
+    "category": "Memoir",
+    "stock": 7,
+    "cover": "https://covers.openlibrary.org/b/isbn/9781524763138-L.jpg",
+    "description": "The former First Lady writes about her childhood, career and years in the White House.",
+    "rating": 4.6,
+    "ratingCount": 2260,
+    "reviews": [
+      {
+        "name": "Chris",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      },
+      {
+        "name": "Rohan",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "title": "Born a Crime",
+    "author": "Trevor Noah",
+    "price": 15.25,
+    "category": "Memoir",
+    "stock": 6,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780399588198-L.jpg",
+    "description": "Stories of growing up mixed-race in South Africa under and after apartheid.",
+    "rating": 4.8,
+    "ratingCount": 1740,
+    "reviews": [
+      {
+        "name": "Ishaan",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      },
+      {
+        "name": "Emma",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      },
+      {
+        "name": "Meera",
+        "rating": 5,
+        "text": "Exactly what I hoped for, and the delivery was quick."
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "price": 15.5,
+    "category": "Science",
+    "stock": 8,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780553380163-L.jpg",
+    "description": "From the Big Bang to black holes, a clear tour of modern cosmology for general readers.",
+    "rating": 4.7,
+    "ratingCount": 1510,
+    "reviews": [
+      {
+        "name": "Nina",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      },
+      {
+        "name": "Diya",
+        "rating": 5,
+        "text": "Exactly what I hoped for, and the delivery was quick."
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "price": 17.99,
+    "category": "Science",
+    "stock": 4,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780345539434-L.jpg",
+    "description": "A sweeping story of the universe and how humans came to understand it.",
+    "rating": 4.8,
+    "ratingCount": 990,
+    "reviews": [
+      {
+        "name": "Tara",
+        "rating": 5,
+        "text": "Exactly what I hoped for, and the delivery was quick."
+      },
+      {
+        "name": "Sam",
+        "rating": 4,
+        "text": "Could not put it down. Easily one of my favourites this year."
+      },
+      {
+        "name": "Kavya",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "title": "The Kite Runner",
+    "author": "Khaled Hosseini",
+    "price": 14.75,
+    "category": "Historical Fiction",
+    "stock": 7,
+    "cover": "https://covers.openlibrary.org/b/isbn/9781594631931-L.jpg",
+    "description": "A friendship in Kabul, a betrayal, and a long road toward redemption.",
+    "rating": 4.7,
+    "ratingCount": 1840,
+    "reviews": [
+      {
+        "name": "Aarav",
+        "rating": 4,
+        "text": "Could not put it down. Easily one of my favourites this year."
+      },
+      {
+        "name": "Ananya",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "title": "The Book Thief",
+    "author": "Markus Zusak",
+    "price": 14.99,
+    "category": "Historical Fiction",
+    "stock": 3,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780375842207-L.jpg",
+    "description": "Narrated by Death, the story of a girl who steals books in Nazi Germany.",
+    "rating": 4.9,
+    "ratingCount": 2330,
+    "reviews": [
+      {
+        "name": "Priya",
+        "rating": 5,
+        "text": "Beautifully written and worth re-reading. Highly recommended."
+      },
+      {
+        "name": "Liam",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      },
+      {
+        "name": "Arjun",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      }
+    ]
+  },
+  {
+    "id": "33",
+    "title": "Life of Pi",
+    "author": "Yann Martel",
+    "price": 13.25,
+    "category": "Adventure",
+    "stock": 9,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780156027328-L.jpg",
+    "description": "A boy survives a shipwreck on a lifeboat with a Bengal tiger.",
+    "rating": 4.3,
+    "ratingCount": 1470,
+    "reviews": [
+      {
+        "name": "Chris",
+        "rating": 5,
+        "text": "Great pacing and memorable ideas. Arrived well packed too."
+      },
+      {
+        "name": "Rohan",
+        "rating": 4,
+        "text": "Good read overall, though it slows down in the middle."
+      }
+    ]
+  },
+  {
+    "id": "34",
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "price": 12.99,
+    "category": "Young Adult",
+    "stock": 10,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780439023528-L.jpg",
+    "description": "A teenager volunteers to take her sister's place in a televised fight to the death.",
+    "rating": 4.5,
+    "ratingCount": 2680,
+    "reviews": [
+      {
+        "name": "Ishaan",
+        "rating": 5,
+        "text": "A classic for a reason. The cover and print quality are lovely."
+      },
+      {
+        "name": "Emma",
+        "rating": 5,
+        "text": "Exactly what I hoped for, and the delivery was quick."
+      },
+      {
+        "name": "Meera",
+        "rating": 4,
+        "text": "Could not put it down. Easily one of my favourites this year."
+      }
+    ]
+  },
+  {
+    "id": "35",
+    "title": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "price": 9.75,
+    "category": "Classic",
+    "stock": 6,
+    "cover": "https://covers.openlibrary.org/b/isbn/9780141441146-L.jpg",
+    "description": "An orphan becomes a governess and must decide how much of herself to give up for love.",
+    "rating": 4.5,
+    "ratingCount": 1190,
+    "reviews": [
+      {
+        "name": "Nina",
+        "rating": 5,
+        "text": "Exactly what I hoped for, and the delivery was quick."
+      },
+      {
+        "name": "Diya",
+        "rating": 4,
+        "text": "Could not put it down. Easily one of my favourites this year."
+      }
+    ]
+  }
+]
