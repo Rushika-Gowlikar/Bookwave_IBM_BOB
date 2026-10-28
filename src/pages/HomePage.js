@@ -3,27 +3,26 @@ import { Link } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
 import BookCover from '../components/BookCover';
 import { BookCard } from '../components/BookCard';
-import { BOOKS } from '../data/books';
 
 export default function HomePage() {
   const { state } = useStore();
   const [searchQuery, setSearchQuery] = useState('');
 
-  const recommended = BOOKS.filter(b => b.featured || b.tag === 'Recommended').slice(0, 5);
-  const bestsellers = BOOKS.filter(b => b.isBestseller).slice(0, 5);
-  const newLaunches = BOOKS.filter(b => b.isNew).slice(0, 5);
+  const recommended = state.books.filter(b => b.featured || b.tag === 'Recommended').slice(0, 5);
+  const bestsellers = state.books.filter(b => b.isBestseller).slice(0, 5);
+  const newLaunches = state.books.filter(b => b.isNew).slice(0, 5);
 
   // Personalized recommendations
   const orderedCats = state.orderHistory.flatMap(o =>
-    o.items.map(i => BOOKS.find(b => b.id === i.bookId)?.category)
+    o.items.map(i => state.books.find(b => b.id === i.bookId)?.category)
   ).filter(Boolean);
   const uniqueCats = [...new Set(orderedCats)];
   const personalized = uniqueCats.length
-    ? BOOKS.filter(b => uniqueCats.includes(b.category)).slice(0, 5)
+    ? state.books.filter(b => uniqueCats.includes(b.category)).slice(0, 5)
     : recommended;
 
   const filtered = searchQuery.trim()
-    ? BOOKS.filter(b =>
+    ? state.books.filter(b =>
         b.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         b.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
         b.category.toLowerCase().includes(searchQuery.toLowerCase())
@@ -178,12 +177,18 @@ export default function HomePage() {
         >
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
             {[
-              { cat: 'Self-Help', emoji: '🧠', desc: 'Mindset & Habits' },
-              { cat: 'Mystery', emoji: '🔍', desc: 'Thrills & Riddles' },
-              { cat: 'Romance', emoji: '❤️', desc: 'Heartfelt Tales' },
+              { cat: 'Self-help', emoji: '🧠', desc: 'Mindset & Habits' },
+              { cat: 'Mystery', emoji: '🔍', desc: 'Clues & Riddles' },
+              { cat: 'Thriller', emoji: '🕵️', desc: 'Edge of Your Seat' },
               { cat: 'Science Fiction', emoji: '🚀', desc: 'Cosmos & AI' },
-              { cat: 'Biography', emoji: '📖', desc: 'Great Lives' },
+              { cat: 'Memoir', emoji: '📖', desc: 'Real Lives' },
               { cat: 'Fantasy', emoji: '⚔️', desc: 'Magic & Lore' },
+              { cat: 'Psychology', emoji: '💡', desc: 'How We Think' },
+              { cat: 'Business', emoji: '📈', desc: 'Money & Startups' },
+              { cat: 'Science', emoji: '🔭', desc: 'Universe & Life' },
+              { cat: 'Historical Fiction', emoji: '🏛️', desc: 'Past, Retold' },
+              { cat: 'Young Adult', emoji: '⚡', desc: 'Teen Favourites' },
+              { cat: 'Classic', emoji: '🪶', desc: 'Timeless Reads' },
             ].map(item => (
               <Link
                 key={item.cat}

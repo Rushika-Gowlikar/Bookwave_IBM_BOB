@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-// Illustrated SVG book covers (no external images needed).
-// Each book gets a motif based on its coverPattern, falling back to its category.
+// Book cover: shows the book's real image (book.cover URL) when it has one.
+// If there is no URL, or the image fails to load, it draws an illustrated SVG instead.
+// The SVG motif is based on the book's coverPattern, falling back to its category.
 
 const PATTERN_MOTIF = {
   circles: 'target',
@@ -17,11 +18,21 @@ const PATTERN_MOTIF = {
 };
 
 const CATEGORY_MOTIF = {
+  Classic: 'quill',
+  Fiction: 'book',
+  'Self-help': 'sun',
+  History: 'temple',
+  Memoir: 'person',
   Romance: 'heart',
   Mystery: 'magnifier',
   'Science Fiction': 'rocket',
   Fantasy: 'castle',
   Historical: 'temple',
+  'Historical Fiction': 'temple',
+  Thriller: 'keyhole',
+  Psychology: 'bulb',
+  Business: 'stairs',
+  Adventure: 'compass',
   Biography: 'person',
   'Self-Help': 'sun',
   Travel: 'compass',
@@ -275,6 +286,25 @@ function wrapTitle(title, max = 11) {
 }
 
 export default function BookCover({ book, className = '', showText = true }) {
+  const [imageFailed, setImageFailed] = useState(false);
+
+  if (book.cover && !imageFailed) {
+    return (
+      <div
+        className={`book-cover rounded-md bg-slate-200 ${className}`}
+        style={{ aspectRatio: '2 / 3' }}
+      >
+        <img
+          src={book.cover}
+          alt={`${book.title} by ${book.author}`}
+          loading="lazy"
+          onError={() => setImageFailed(true)}
+          className="block w-full h-full object-cover"
+        />
+      </div>
+    );
+  }
+
   const motif = PATTERN_MOTIF[book.coverPattern] || CATEGORY_MOTIF[book.category] || 'book';
   const c1 = book.coverColor || '#4f46e5';
   const c2 = book.coverAccent || '#312e81';

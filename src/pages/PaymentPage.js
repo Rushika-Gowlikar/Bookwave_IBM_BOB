@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
-import { BOOKS } from '../data/books';
 
 const PAYMENT_METHODS = [
   { id: 'Credit Card', name: 'Credit / Debit Card', icon: '💳', desc: 'Visa, MasterCard, RuPay' },
@@ -27,7 +26,7 @@ export default function PaymentPage() {
 
   const cartItems = state.cart.map(i => ({
     ...i,
-    book: BOOKS.find(b => b.id === i.bookId)
+    book: state.books.find(b => b.id === i.bookId)
   })).filter(i => i.book);
 
   const payable = orderDetails.total ?? cartItems.reduce((s, i) => s + i.book.price * i.quantity, 0);

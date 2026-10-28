@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
-import { BOOKS } from '../data/books';
 import { BookCard } from '../components/BookCard';
 
 export default function WishlistPage() {
   const { state } = useStore();
-  const wishlistBooks = state.wishlist.map(id => BOOKS.find(b => b.id === id)).filter(Boolean);
+  const wishlistBooks = state.wishlist.map(id => state.books.find(b => b.id === id)).filter(Boolean);
 
   if (wishlistBooks.length === 0) {
     return (

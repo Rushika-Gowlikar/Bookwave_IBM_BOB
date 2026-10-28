@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
 import BookCover from '../components/BookCover';
-import { BOOKS } from '../data/books';
 
 const STATUS_COLORS = {
   Delivered: 'text-emerald-700 dark:text-emerald-300 bg-emerald-500/15 border-emerald-500/30',
@@ -60,7 +59,7 @@ export default function OrdersPage() {
         {state.orderHistory.map(order => {
           const items = order.items.map(i => ({
             ...i,
-            book: BOOKS.find(b => b.id === i.bookId)
+            book: state.books.find(b => b.id === i.bookId)
           })).filter(i => i.book);
 
           return (

@@ -1,5 +1,6 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react';
-import { BOOKS, ADDRESSES, ORDER_HISTORY } from '../data/books';
+import React, { createContext, useContext, useReducer, useEffect, useCallback } from 'react';
+import { ADDRESSES, ORDER_HISTORY } from '../data/books';
+import { fetchBooks } from '../api/books';
 
 const StoreContext = createContext(null);
 
@@ -8,7 +9,9 @@ const savedTheme = localStorage.getItem('bookwave_theme') || 'light';
 const initialState = {
   theme: savedTheme,
   user: null,
-  books: BOOKS,
+  books: [],
+  booksStatus: 'loading', // 'loading' | 'ready' | 'error'
+  booksError: '',
   cart: [],
   wishlist: [],
   orderHistory: ORDER_HISTORY,
@@ -19,6 +22,13 @@ const initialState = {
 
 function reducer(state, action) {
   switch (action.type) {
+    case 'BOOKS_LOADING':
+      return { ...state, booksStatus: 'loading', booksError: '' };
+    case 'BOOKS_LOADED':
+      return { ...state, books: action.payload, booksStatus: 'ready', booksError: '' };
+    case 'BOOKS_FAILED':
+      return { ...state, booksStatus: 'error', booksError: action.payload };
+
     case 'TOGGLE_THEME': {
       const newTheme = state.theme === 'dark' ? 'light' : 'dark';
       localStorage.setItem('bookwave_theme', newTheme);
@@ -82,7 +92,7 @@ function reducer(state, action) {
         date: new Date().toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }),
         status: 'Confirmed',
         total: action.payload.total,
-        items: state.cart.map(i => ({ bookId: i.bookId, quantity: i.quantity, price: BOOKS.find(b => b.id === i.bookId)?.price || 0 })),
+        items: state.cart.map(i => ({ bookId: i.bookId, quantity: i.quantity, price: state.books.find(b => b.id === i.bookId)?.price || 0 })),
         address: action.payload.address,
         paymentMethod: action.payload.paymentMethod,
       };
@@ -110,6 +120,17 @@ function reducer(state, action) {
 export function StoreProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  const loadBooks = useCallback(() => {
+    dispatch({ type: 'BOOKS_LOADING' });
+    fetchBooks()
+      .then(books => dispatch({ type: 'BOOKS_LOADED', payload: books }))
+      .catch(err => dispatch({ type: 'BOOKS_FAILED', payload: err.message }));
+  }, []);
+
+  useEffect(() => {
+    loadBooks();
+  }, [loadBooks]);
+
   useEffect(() => {
     if (state.theme === 'dark') {
       document.documentElement.classList.add('dark');
@@ -119,7 +140,7 @@ export function StoreProvider({ children }) {
   }, [state.theme]);
 
   return (
-    <StoreContext.Provider value={{ state, dispatch }}>
+    <StoreContext.Provider value={{ state, dispatch, reloadBooks: loadBooks }}>
       {children}
     </StoreContext.Provider>
   );
@@ -127,4 +148,8 @@ export function StoreProvider({ children }) {
 
 export function useStore() {
   return useContext(StoreContext);
+}
+
+export function useBooks() {
+  return useContext(StoreContext).state.books;
 }

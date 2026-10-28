@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
 import BookCover from '../components/BookCover';
-import { BOOKS } from '../data/books';
 
 export default function CheckoutPage() {
   const { state } = useStore();
@@ -10,7 +9,7 @@ export default function CheckoutPage() {
 
   const cartItems = state.cart.map(i => ({
     ...i,
-    book: BOOKS.find(b => b.id === i.bookId)
+    book: state.books.find(b => b.id === i.bookId)
   })).filter(i => i.book);
 
   const subtotal = cartItems.reduce((s, i) => s + i.book.price * i.quantity, 0);

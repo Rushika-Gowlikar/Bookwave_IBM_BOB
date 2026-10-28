@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
 import BookCover from '../components/BookCover';
-import { BOOKS } from '../data/books';
 
 export default function ConfirmationPage() {
   const { state } = useStore();
@@ -10,7 +9,7 @@ export default function ConfirmationPage() {
   const order = state.currentOrder;
 
   const purchasedItems = order
-    ? order.items.map(i => ({ ...i, book: BOOKS.find(b => b.id === i.bookId) })).filter(i => i.book)
+    ? order.items.map(i => ({ ...i, book: state.books.find(b => b.id === i.bookId) })).filter(i => i.book)
     : [];
 
   return (

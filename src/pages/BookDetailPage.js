@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
 import BookCover from '../components/BookCover';
-import { BOOKS } from '../data/books';
 import { StarRating } from '../components/BookCard';
 
 export default function BookDetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { state, dispatch } = useStore();
-  const book = BOOKS.find(b => b.id === parseInt(id));
+  const book = state.books.find(b => b.id === parseInt(id));
 
   const [reviewText, setReviewText] = useState('');
   const [reviewRating, setReviewRating] = useState(0);
@@ -28,7 +27,7 @@ export default function BookDetailPage() {
     );
   }
 
-  const related = book.relatedIds?.map(rid => BOOKS.find(b => b.id === rid)).filter(Boolean) || [];
+  const related = book.relatedIds?.map(rid => state.books.find(b => b.id === rid)).filter(Boolean) || [];
   const inCart = state.cart.some(i => i.bookId === book.id);
   const inWishlist = state.wishlist.includes(book.id);
   const discountPercent = Math.round((1 - book.price / book.originalPrice) * 100);

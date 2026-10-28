@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { BookCard } from '../components/BookCard';
-import { BOOKS, CATEGORIES, BRANDS } from '../data/books';
+import { useStore } from '../context/StoreContext';
 
 const FORMATS = ['All Formats', 'Paperback', 'Hardcover', 'eBook'];
 
@@ -28,6 +28,10 @@ const COLLECTIONS = [
 ];
 
 export default function CataloguePage() {
+  const { state } = useStore();
+  const BOOKS = state.books;
+  const CATEGORIES = useMemo(() => ['All', ...new Set(BOOKS.map(b => b.category))], [BOOKS]);
+  const BRANDS = useMemo(() => [...new Set(BOOKS.map(b => b.brand))], [BOOKS]);
   const [searchParams, setSearchParams] = useSearchParams();
   const initCategory = searchParams.get('category') || 'All';
   const initFilter = searchParams.get('filter') || 'all';
@@ -51,7 +55,7 @@ export default function CataloguePage() {
       }
     });
     return counts;
-  }, []);
+  }, [BOOKS, CATEGORIES]);
 
   // Collection counts
   const collectionCounts = useMemo(() => {
@@ -61,7 +65,7 @@ export default function CataloguePage() {
       bestseller: BOOKS.filter(b => b.isBestseller || b.tag === 'Bestseller').length,
       new: BOOKS.filter(b => b.isNew || b.tag === 'New Launch').length,
     };
-  }, []);
+  }, [BOOKS]);
 
   const hasActiveFilters =
     selectedCategory !== 'All' ||
@@ -129,7 +133,7 @@ export default function CataloguePage() {
     }
 
     return list;
-  }, [selectedCategory, selectedCollection, selectedBrand, selectedFormat, selectedPriceIdx, sortBy, search]);
+  }, [BOOKS, selectedCategory, selectedCollection, selectedBrand, selectedFormat, selectedPriceIdx, sortBy, search]);
 
   return (
     <div className="min-h-screen bg-dark-bg pt-16 flex flex-col md:flex-row transition-colors duration-200">

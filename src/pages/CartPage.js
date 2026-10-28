@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
 import BookCover from '../components/BookCover';
-import { BOOKS } from '../data/books';
 import { BookCard } from '../components/BookCard';
 
 export default function CartPage() {
@@ -11,7 +10,7 @@ export default function CartPage() {
 
   const cartItems = state.cart.map(i => ({
     ...i,
-    book: BOOKS.find(b => b.id === i.bookId)
+    book: state.books.find(b => b.id === i.bookId)
   })).filter(i => i.book);
 
   const subtotal = cartItems.reduce((s, i) => s + i.book.price * i.quantity, 0);
@@ -21,7 +20,7 @@ export default function CartPage() {
 
   // Recommendations based on cart items
   const cartCats = [...new Set(cartItems.map(i => i.book.category))];
-  const recommendations = BOOKS.filter(b =>
+  const recommendations = state.books.filter(b =>
     cartCats.includes(b.category) && !state.cart.some(c => c.bookId === b.id)
   ).slice(0, 4);
 
