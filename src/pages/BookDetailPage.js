@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
+import BookCover from '../components/BookCover';
 import { BOOKS } from '../data/books';
 import { StarRating } from '../components/BookCard';
 
@@ -81,42 +82,7 @@ export default function BookDetailPage() {
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 bg-dark-card border border-dark-border p-6 rounded-3xl shadow-sm">
             {/* Book Cover Jacket with 3D spine & readable title */}
             <div className="flex-shrink-0 mx-auto sm:mx-0">
-              <div
-                className="book-cover w-44 sm:w-52 h-64 sm:h-72 rounded-2xl flex flex-col justify-between p-4 shadow-2xl relative select-none"
-                style={{
-                  background: `linear-gradient(145deg, ${book.coverColor || '#4f46e5'}, ${book.coverAccent || '#312e81'})`
-                }}
-              >
-                {/* Top Badge */}
-                <div className="relative z-10 flex justify-between items-center">
-                  {book.tag ? (
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-black/40 text-white backdrop-blur-md">
-                      {book.tag}
-                    </span>
-                  ) : <span />}
-                  <span className="text-[9px] font-bold text-white/80 uppercase tracking-widest">
-                    {book.format}
-                  </span>
-                </div>
-
-                {/* Center Title */}
-                <div className="relative z-10 text-center my-auto px-1">
-                  <div className="text-[10px] font-extrabold uppercase tracking-widest text-amber-200/90 mb-1 drop-shadow-md">
-                    {book.category}
-                  </div>
-                  <h2 className="text-lg sm:text-xl font-black text-white leading-tight drop-shadow-[0_2px_5px_rgba(0,0,0,0.9)]">
-                    {book.title}
-                  </h2>
-                  <div className="text-xs font-semibold text-amber-100/90 mt-2 italic drop-shadow-md">
-                    by {book.author}
-                  </div>
-                </div>
-
-                <div className="relative z-10 flex justify-between text-[9px] font-bold text-white/70">
-                  <span>{book.language}</span>
-                  <span>BookWave</span>
-                </div>
-              </div>
+              <BookCover book={book} className="w-48 sm:w-56 shadow-2xl" />
             </div>
 
             {/* Book Info */}
@@ -294,14 +260,7 @@ export default function BookDetailPage() {
                 to={`/book/${b.id}`}
                 className="flex gap-3 bg-dark-card border border-dark-border rounded-2xl p-3 hover:border-brand-500/50 hover:shadow-md transition-all group"
               >
-                <div
-                  className="w-16 h-22 rounded-xl flex-shrink-0 flex items-center justify-center p-1 text-center shadow-md relative overflow-hidden"
-                  style={{ background: `linear-gradient(135deg, ${b.coverColor}, ${b.coverAccent})` }}
-                >
-                  <span className="text-white font-black text-[9px] drop-shadow-md line-clamp-2">
-                    {b.title}
-                  </span>
-                </div>
+                <BookCover book={b} showText={false} className="w-16 flex-shrink-0 shadow-md" />
                 <div className="flex-1 min-w-0 flex flex-col justify-between">
                   <div>
                     <h4 className="text-xs font-bold text-ink truncate group-hover:text-brand-600 dark:group-hover:text-brand-400">

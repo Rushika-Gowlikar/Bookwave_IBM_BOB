@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
+import BookCover from '../components/BookCover';
 import { BookCard } from '../components/BookCard';
 import { BOOKS } from '../data/books';
 
@@ -110,12 +111,7 @@ export default function HomePage() {
                         onClick={() => setSearchQuery('')}
                         className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-dark-hover transition-colors"
                       >
-                        <div
-                          className="w-9 h-12 rounded-lg flex-shrink-0 flex items-center justify-center text-[10px] text-white font-extrabold shadow-sm"
-                          style={{ background: `linear-gradient(135deg, ${b.coverColor}, ${b.coverAccent})` }}
-                        >
-                          {b.title[0]}
-                        </div>
+                        <BookCover book={b} showText={false} className="w-9 flex-shrink-0 shadow-sm" />
                         <div className="min-w-0 flex-1">
                           <div className="text-xs font-bold text-ink truncate">{b.title}</div>
                           <div className="text-[11px] text-brand-600 dark:text-brand-400 font-medium truncate">

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
+import BookCover from '../components/BookCover';
 import { BOOKS } from '../data/books';
 
 export default function CheckoutPage() {
@@ -95,14 +96,7 @@ export default function CheckoutPage() {
                     key={book.id}
                     className="flex-shrink-0 flex items-center gap-3 bg-dark-bg border border-dark-border rounded-2xl p-3 min-w-[220px]"
                   >
-                    <div
-                      className="w-12 h-16 rounded-xl flex items-center justify-center p-1 text-center shadow-md relative overflow-hidden"
-                      style={{ background: `linear-gradient(135deg, ${book.coverColor}, ${book.coverAccent})` }}
-                    >
-                      <span className="text-white font-black text-[8px] drop-shadow-sm line-clamp-2">
-                        {book.title}
-                      </span>
-                    </div>
+                    <BookCover book={book} showText={false} className="w-12 flex-shrink-0 shadow-md" />
                     <div className="min-w-0">
                       <div className="text-xs font-bold text-ink truncate max-w-[130px]">{book.title}</div>
                       <div className="text-[10px] text-brand-600 dark:text-brand-400 font-medium">Qty: {quantity}</div>

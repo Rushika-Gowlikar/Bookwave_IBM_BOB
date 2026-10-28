@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
+import BookCover from '../components/BookCover';
 import { BOOKS } from '../data/books';
 
 export default function ConfirmationPage() {
@@ -41,14 +42,7 @@ export default function ConfirmationPage() {
             <div className="space-y-2.5 max-h-48 overflow-y-auto pr-1 scrollbar-thin">
               {purchasedItems.map(({ book, price, quantity }) => (
                 <div key={book.id} className="flex items-center gap-3">
-                  <div
-                    className="w-10 h-14 rounded-lg flex items-center justify-center p-1 text-center shadow-sm relative overflow-hidden flex-shrink-0"
-                    style={{ background: `linear-gradient(135deg, ${book.coverColor}, ${book.coverAccent})` }}
-                  >
-                    <span className="text-white font-black text-[7px] drop-shadow-sm line-clamp-2">
-                      {book.title}
-                    </span>
-                  </div>
+                  <BookCover book={book} showText={false} className="w-10 flex-shrink-0 shadow-sm" />
                   <div className="min-w-0 flex-1">
                     <div className="text-xs font-bold text-ink truncate">{book.title}</div>
                     <div className="text-[10px] text-mutedtext">By {book.author} · Qty: {quantity}</div>

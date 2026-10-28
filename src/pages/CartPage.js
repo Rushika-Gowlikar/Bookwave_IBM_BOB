@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
+import BookCover from '../components/BookCover';
 import { BOOKS } from '../data/books';
 import { BookCard } from '../components/BookCard';
 
@@ -74,14 +75,7 @@ export default function CartPage() {
               >
                 {/* Mini Book Cover */}
                 <Link to={`/book/${book.id}`} className="flex-shrink-0 self-center sm:self-start">
-                  <div
-                    className="w-20 h-28 rounded-xl flex items-center justify-center p-1.5 text-center shadow-md relative overflow-hidden select-none"
-                    style={{ background: `linear-gradient(135deg, ${book.coverColor}, ${book.coverAccent})` }}
-                  >
-                    <span className="text-white font-black text-[9px] drop-shadow-md line-clamp-3">
-                      {book.title}
-                    </span>
-                  </div>
+                  <BookCover book={book} showText={false} className="w-20 shadow-md" />
                 </Link>
 
                 {/* Details */}

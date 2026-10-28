@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
+import BookCover from './BookCover';
 
 export function BookCard({ book, size = 'md' }) {
   const { state, dispatch } = useStore();
@@ -25,14 +26,11 @@ export function BookCard({ book, size = 'md' }) {
     <Link to={`/book/${book.id}`} className="group block h-full">
       <div className="book-card bg-dark-card border border-dark-border rounded-2xl overflow-hidden hover:border-brand-500/50 hover:shadow-xl hover:shadow-brand-900/10 transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1">
         {/* Book Jacket Cover */}
-        <div
-          className={`book-cover relative ${isSmall ? 'h-36' : 'h-52'} flex flex-col justify-between p-3 select-none`}
-          style={{
-            background: `linear-gradient(145deg, ${book.coverColor || '#4f46e5'}, ${book.coverAccent || '#312e81'})`
-          }}
-        >
+        <div className="relative flex justify-center bg-dark-surface px-3 pt-4 pb-3 select-none">
+          <BookCover book={book} className={`${isSmall ? 'h-36' : 'h-52'} shadow-book`} />
+
           {/* Top badges bar */}
-          <div className="relative z-10 flex items-start justify-between w-full">
+          <div className="absolute top-2 left-2 right-2 z-10 flex items-start justify-between">
             {book.tag ? (
               <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full shadow-md backdrop-blur-md flex items-center gap-1 ${
                 book.tag === 'Bestseller'
@@ -67,31 +65,6 @@ export function BookCard({ book, size = 'md' }) {
             </button>
           </div>
 
-          {/* Center Book Title & Category - ALWAYS HIGH CONTRAST & READABLE */}
-          <div className="relative z-10 text-center px-2 py-1 my-auto">
-            <div className="text-[9px] font-extrabold uppercase tracking-widest text-amber-200/90 mb-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-              {book.category}
-            </div>
-            <div
-              className={`font-black text-white leading-tight drop-shadow-[0_2px_5px_rgba(0,0,0,0.9)] line-clamp-2 ${
-                isSmall ? 'text-xs' : 'text-sm md:text-base'
-              }`}
-              style={{ letterSpacing: '-0.02em' }}
-            >
-              {book.title}
-            </div>
-            {!isSmall && (
-              <div className="text-[11px] font-medium text-amber-100/90 mt-1 italic drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)] line-clamp-1">
-                by {book.author}
-              </div>
-            )}
-          </div>
-
-          {/* Bottom ornamental bar */}
-          <div className="relative z-10 flex items-center justify-between text-[9px] font-semibold text-white/70 px-1">
-            <span className="uppercase tracking-wider">{book.format}</span>
-            <span className="opacity-80">BookWave</span>
-          </div>
         </div>
 
         {/* Info Area below cover */}

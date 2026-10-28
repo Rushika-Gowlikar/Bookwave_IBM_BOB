@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
+import BookCover from '../components/BookCover';
 import { BOOKS } from '../data/books';
 
 const STATUS_COLORS = {
@@ -88,14 +89,7 @@ export default function OrdersPage() {
                 {items.map(({ book, quantity, price }) => (
                   <div key={book.id} className="flex items-center gap-4">
                     <Link to={`/book/${book.id}`} className="flex-shrink-0">
-                      <div
-                        className="w-14 h-20 rounded-xl flex items-center justify-center p-1 text-center shadow-md relative overflow-hidden"
-                        style={{ background: `linear-gradient(135deg, ${book.coverColor}, ${book.coverAccent})` }}
-                      >
-                        <span className="text-white font-black text-[8px] drop-shadow-sm line-clamp-2">
-                          {book.title}
-                        </span>
-                      </div>
+                      <BookCover book={book} showText={false} className="w-14 shadow-md" />
                     </Link>
                     <div className="flex-1 min-w-0">
                       <Link
